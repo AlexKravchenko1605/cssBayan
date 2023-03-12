@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.label-img {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  display: block;
+  margin: 0 auto;
+  transform: scale(0);
+  transition: 0.8s;
+}
+
+.container {
+  max-width: 50%;
+  margin: 5% auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: rgb(0, 0, 255);
+  padding: 10px;
+}
+
+.container:hover {
+  color: #000;
+}
+
+.accordeon-item {
+  border-top: 1px solid #000;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordeon-item__title {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0rem;
+}
+
+.accordeon-item__title:hover {
+  cursor: pointer;
+}
+
+.accordeon-item__title i {
+  transition: 0.8s;
+  opacity: 0;
+  color: #000;
+}
+
+.accordeon-item input {
+  display: none;
+}
+
+.container:hover .accordeon-item__title i {
+  opacity: 1;
+}
+
+input:checked ~ .accordeon-item__title .label-img {
+  display: block;
+  color: #000;
+  transform: scale(1);
+  width: 50%;
+  height: 50%;
+  margin: 2rem auto;
+  opacity: 1;
+}
+
+.accordeon-item:hover .label-img {
+  transform: scale(1);
+  width: 50%;
+  height: 50%;
+  margin: 2rem auto;
+  opacity: 1;
+}
+
+.accordeon-item:hover .accordeon-item__title i,
+input:checked ~ .accordeon-item__title i {
+  rotate: 45deg;
+}
+
+input:checked ~ .accordeon-item__title {
+  color: #000;
+}
