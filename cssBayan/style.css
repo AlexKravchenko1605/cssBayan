@@ -92,3 +92,20 @@ input:checked ~ .accordeon-item__title i {
 input:checked ~ .accordeon-item__title {
   color: #000;
 }
+/* media queries */
+
+@media (max-width: 1300px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    font-size: 0.6em;
+  }
+}
